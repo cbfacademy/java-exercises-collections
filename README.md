@@ -106,7 +106,7 @@ public HashMap<Integer, String> useHashMap() {
     //  - add {5, JavaScript} entry to the map
     //  - add {6, Rust} entry to the map
     //  - determine the set of keys from the map and print it on the screen
-    //  - determine the set of keys from the map and print it on the screen
+    //  - determine the set of values from the map and print it on the screen
     //  - determine whether the map contains "English" as a language and print the result on the screen
     //  - return the map
     throw new RuntimeException("Not implemented");
@@ -117,17 +117,10 @@ public HashMap<Integer, String> useHashMap() {
 
 To verify that your code works as expected, run the `CollectionsExercisesTest` tests.
 
-In your terminal, ensure that you are in the `java-collections` folder.
-Then run the following command in your terminal.
+In your terminal, ensure that you are in the root directory of this repo, then run the following command:
 
 ```shell
 ./mvnw clean test
-```
-
-If you are on Windows, run this command instead:
-
-```shell
-mvnw.cmd clean test
 ```
 
 ### Tests Results
