@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.HashSet;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -43,11 +43,11 @@ public class CollectionsExercisesTest {
     }
 
     @Test
-    @DisplayName("working with LinkedLists")
-    public void workWithLinkedLists() {
+    @DisplayName("working with ArrayLists")
+    public void workWithArrayLists() {
         final CollectionsExercises exercise = new CollectionsExercises();
 
-        final LinkedList<Integer> result = exercise.useLinkedList();
+        final ArrayList<Integer> result = exercise.useArrayList();
 
         assertThat(result, is(notNullValue()));
         assertThat(result.size(), is(8));
@@ -63,24 +63,25 @@ public class CollectionsExercisesTest {
     }
 
     @Test
-    @DisplayName("working with Stacks")
-    public void workingWithStacks() {
+    @DisplayName("working with HashSets")
+    public void workingWithHashSets() {
         final CollectionsExercises exercise = new CollectionsExercises();
 
-        final Stack<Integer> result = exercise.useStack();
+        final HashSet<Integer> result = exercise.useHashSet();
 
         assertThat(result, is(notNullValue()));
         assertThat(result.size(), is(4));
-        assertThat(result.get(0), is(5));
-        assertThat(result.get(1), is(6));
-        assertThat(result.get(2), is(8));
-        assertThat(result.get(3), is(4));
-        assertThat(outputStreamCaptor.toString().trim(), is("599"));
+        assertThat(result.contains(1), is(true));
+        assertThat(result.contains(2), is(false));
+        assertThat(result.contains(3), is(true));
+        assertThat(result.contains(4), is(true));
+        assertThat(result.contains(5), is(true));
+        assertThat(outputStreamCaptor.toString().trim(), is("4truefalse4"));
     }
 
     @Test
     @DisplayName("working with ArrayDeques")
-    public void workingWithQueues() {
+    public void workingWithArrayDeques() {
         final CollectionsExercises exercise = new CollectionsExercises();
 
         final ArrayDeque<Integer> result = exercise.useArrayDeque();
@@ -104,7 +105,6 @@ public class CollectionsExercisesTest {
         assertThat(result, is(notNullValue()));
         assertThat(result.size(), is(6));
         assertThat(outputStreamCaptor.toString().trim(),
-                is("[1, 2, 3, 4, 5, 6][TypeScript, Kotlin, Python, Java, JavaScript, Rust]false")
-        );
+                is("[1, 2, 3, 4, 5, 6][TypeScript, Kotlin, Python, Java, JavaScript, Rust]false"));
     }
 }
