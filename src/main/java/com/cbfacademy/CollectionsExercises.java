@@ -1,51 +1,31 @@
 package com.cbfacademy;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.HashSet;
 
 public class CollectionsExercises {
 
-    public LinkedList<Integer> useLinkedList() {
-        LinkedList<Integer> newLinkedList = new LinkedList<Integer>();
+    public ArrayList<Integer> useArrayList() {
+        ArrayList<Integer> newArrayList = new ArrayList<Integer>();
 
         // - add 4 as the first element of the list
-        newLinkedList.add(4);
+        newArrayList.add(4);
         // - then add 5, 6, 8, 2, 9 to the list
-        newLinkedList.add(5);
-        newLinkedList.add(6);
-        newLinkedList.add(8);
-        newLinkedList.add(2);
-        newLinkedList.add(9);
+        newArrayList.add(5);
+        newArrayList.add(6);
+        newArrayList.add(8);
+        newArrayList.add(2);
+        newArrayList.add(9);
         // - add another 2 as the last element of the list
-        newLinkedList.add(2);
+        newArrayList.add(2);
         // - add 4 as the 3rd element of the list
-        newLinkedList.add(2, 4);
-        // - invoke the method element() on the list and print the result on the screen
-        System.out.println(newLinkedList.element());
+        newArrayList.add(2, 4);
+        // - invoke the method get(0) on the list and print the result on the screen
+        System.out.println(newArrayList.get(0));
         // - return the list
-        return newLinkedList;
-    }
-
-    public Stack<Integer> useStack() {
-        Stack<Integer> stack = new Stack<>();
-
-        // - add 5, 6, 8, 9 to the stack
-        stack.add(5);
-        stack.add(6);
-        stack.add(8);
-        stack.add(9);
-        // - print the first element of the stack on the screen
-        System.out.print(stack.firstElement());
-        // - print the last element of the stack on the screen
-        System.out.print(stack.lastElement());
-        // - invoke the method pop() on the stack and print the result on the screen
-        System.out.print(stack.pop());
-        // - invoke the push(4) method on the stack
-        stack.push(4);
-        // - return the stack
-        return stack;
+        return newArrayList;
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
@@ -66,6 +46,32 @@ public class CollectionsExercises {
         System.out.print(queue.element());
         // - return the queue
         return queue;
+    }
+
+    public HashSet<Integer> useHashSet() {
+        HashSet<Integer> hashSet = new HashSet<>();
+        // - add 1, 2, 3, 4 to the set
+        hashSet.add(1);
+        hashSet.add(2);
+        hashSet.add(3);
+        hashSet.add(4);
+        // - add 2 again (duplicate)
+        hashSet.add(2);
+        // - print the size of the set on the screen
+        System.out.print(hashSet.size());
+        // - add 5 and 1 to the set (1 is a duplicate)
+        hashSet.add(5);
+        hashSet.add(1);
+        // - determine whether the set contains 3 and print the result on the screen
+        System.out.print(hashSet.contains(3));
+        // - determine whether the set contains 9 and print the result on the screen
+        System.out.print(hashSet.contains(9));
+        // - remove 2 from the set
+        hashSet.remove(2);
+        // - print the size of the set on the screen
+        System.out.print(hashSet.size());
+        // - return the set
+        return hashSet;
     }
 
     public HashMap<Integer, String> useHashMap() {
