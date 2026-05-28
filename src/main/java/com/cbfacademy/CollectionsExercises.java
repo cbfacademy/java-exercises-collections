@@ -19,12 +19,6 @@ public class CollectionsExercises {
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
-        // TODO: as a stack — create an empty arrayDeque
-        //  - push 5, 6, 8, 9 onto the stack
-        //  - print peekLast() on the screen (bottom of the stack)
-        //  - print peek() on the screen (top of the stack)
-        //  - invoke the method pop() on the stack and print the result on the screen
-        //  - invoke the push(4) method on the stack
         // TODO: as a queue — create a new empty arrayDeque
         //  - add 5, 6, 8, 9 to the queue
         //  - print the first element of the queue on the screen
